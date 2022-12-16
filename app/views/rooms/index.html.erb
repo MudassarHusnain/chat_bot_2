@@ -1,0 +1,38 @@
+<div class="row">
+  <div class="col-3">
+    <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-light-dark" style="position: absolute;width: 280px;height: 100%;border-right:20px solid #1a1e21">
+      <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+        <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+        <span class="ms-0" style="text-transform: capitalize;font-family: arial, sans-serif;font-size: 20px;color: #1a1e21"><%=current_user.name %></span>
+      </a>
+      <hr>
+      <br>
+      <%= render "rooms/form",room:Room.new %>
+      <ul class="nav nav-pills flex-column mb-auto mt-4">
+        <%@rooms.each do|room| %>
+
+          <li class="nav-item">
+            <%=link_to room.name,messages_path(id:session[:room_id]),class:"nav-link"%>
+          </li>
+
+        <%end %>
+      </ul>
+
+      <hr>
+      <%= button_to "Log Out",destroy_user_session_path,method: :delete, class:"btn btn-danger w-100"%>
+    </div>
+  </div>
+
+</div>
+<!--<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>-->
+
+<script>
+  let count=0;
+  console.log("this is for the testing of javascript")
+  $(document).ready(function(){
+    $("#dropdownMenuLink").click(function(){
+        count++;
+      $("ul.dropdown-test").addClass("show");
+    });
+  });
+</script>
