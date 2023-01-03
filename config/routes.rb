@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get 'rooms/new'
   resources :rooms
   resources :messages
+
   root "rooms#index"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

@@ -13,7 +13,7 @@ class ApplicationController < ActionController::Base
   def current_room
     @current_room_id=0
   end
-end
-def after_sign_out_path_for(resource_or_scope)
+  def after_sign_out_path_for(resource_or_scope)
     new_user_session_path
   end
+end

@@ -25,9 +25,9 @@
 
 <%#= render "devise/shared/links" %>
   <div class="container mt-5">
-    <div class="signin-content">
-      <div class="signin-image">
-        <figure><img src="signin-image.jpg" alt="sing up image"></figure>
+    <div class="signup-content">
+      <div class="signup-image">
+        <figure><%=image_tag "signin-image.jpg" %></figure>
           <%= link_to "Create New Account", new_registration_path(resource_name),class: "signup-image-link" %><br />
 
       </div>

@@ -5,6 +5,7 @@ class RoomsController < ApplicationController
   end
 
   def show
+
     @room=Room.find_by(id: params[:id])
     @rooms=Room.all
     @messages=Message.all
@@ -25,7 +26,5 @@ class RoomsController < ApplicationController
   def room_params
     params.require(:room).permit(:name)
   end
-  def after_sign_out_path_for(resource_or_scope)
-    new_user_session_path
-  end
+
 end

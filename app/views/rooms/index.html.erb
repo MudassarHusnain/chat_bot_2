@@ -12,7 +12,7 @@
         <%@rooms.each do|room| %>
 
           <li class="nav-item">
-            <%=link_to room.name,messages_path(id:session[:room_id]),class:"nav-link"%>
+            <%=link_to room.name,room,class:"nav-link"%>
           </li>
 
         <%end %>
@@ -26,13 +26,3 @@
 </div>
 <!--<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>-->
 
-<script>
-  let count=0;
-  console.log("this is for the testing of javascript")
-  $(document).ready(function(){
-    $("#dropdownMenuLink").click(function(){
-        count++;
-      $("ul.dropdown-test").addClass("show");
-    });
-  });
-</script>

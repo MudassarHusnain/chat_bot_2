@@ -11,8 +11,13 @@
     </div>
   <% end %>
 <div class="input-group">
-  <%=form.text_field :content, class: "form-control form-control-lg",placeholder: "Message",style:";position: relative;width:calc(100%-15px);margin-top:10%"%>
-  <%= form.submit "Add", class: "btn btn-outline-secondary",style:"position:absolute;margin-top:12%;margin-left:100%" %>
+  <%=form.text_field :content, class: "form-control",placeholder: "Message",style:";position: relative;width:100%;margin-top:1%"%>
+  <%= form.hidden_field :room_id,value:room.id %>
+   <div class="input-group-append">
+  <%= form.submit "Add", class: "btn btn-primary",style:"position:absolute;margin-top:%;margin-left:100%" %>
+   </div>
 <!--  <button class="btn btn-outline-secondary" type="button" id="button-add">Button</button>-->
 </div>
 <% end %>
+
+
