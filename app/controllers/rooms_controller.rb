@@ -5,7 +5,6 @@ class RoomsController < ApplicationController
   end
 
   def show
-
     @room=Room.find_by(id: params[:id])
     @rooms=Room.all
     @messages=Message.all
