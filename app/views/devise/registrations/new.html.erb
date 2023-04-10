@@ -56,9 +56,10 @@
                 <%= f.password_field :password, autocomplete: "new-password",placeholder: "Password" %>
 
             </div>
+            <br>
             <div class="form-group">
               <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
-                  <%= f.password_field :password_confirmation, autocomplete: "new-password",placeholder: "Repeat Password" %>
+                  <%= f.file_field :image%>
             </div>
             <div class="form-group form-button">
                   <%= f.submit "Sign up",class: "form-submit" %>

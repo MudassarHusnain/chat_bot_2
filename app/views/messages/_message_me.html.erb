@@ -1,8 +1,7 @@
 <%= turbo_frame_tag "message" do %>
 <div class="card-body" data-mdb-perfect-scrollbar="true" style="position: relative; height: 60px;">
   <div class="d-flex flex-row justify-content-start">
-    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3-bg.webp"
-         alt="avatar 1" style="width: 45px; height: 100%;">
+    <%=image_tag current_user.image,style="width: 45px; height: 100%;" %>
     <div>
       <%@username=User.find_by(id:message.user_id)%>
       <p class="small p-2 ms-3 mb-1 rounded-3" style="background-color: #f5f6f7;color: #1a1e21"><%=message.content %></p>

@@ -88,5 +88,4 @@ production:
   adapter: postgresql
   encoding: unicode
   database: chat_database
-  username: chat_database
-  password: password
+  socket: /tmp/mysql.sock

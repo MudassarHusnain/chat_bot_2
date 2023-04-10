@@ -10,7 +10,9 @@ module AppForTheActionCable
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
-
+    I18n.available_locales = [:en, :ru]
+    config.time_zone = 'Moscow' # set default time zone to "Moscow" (UTC +4)
+    config.i18n.default_locale = :ru # set default locale to Russian
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files
